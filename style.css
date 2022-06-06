@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&family=Special+Elite&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Section Presentation */
+
+.presentation-container{
+    display: block;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board{
+    border: 2px solid #990000;
+    padding: 1rem;
+}
+
+#presentation{
+    background-image: url(./image/paper\ \(2\).jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#presentation h1{
+    display: block;
+    width: fit-content;
+    font-family: 'Special Elite';
+    font-size: 2.5rem;
+    position: relative;
+    color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#presentation h1:nth-child(1){
+    animation-delay: .8s;
+}
+
+#presentation h1:nth-child(2){
+    animation-delay: 3.5s;
+}
+
+#presentation h1:nth-child(3){
+    animation-delay: 7.6s;
+}
+
+#presentation h1:nth-child(4){
+    animation-delay: 9.6s;
+}
+
+#presentation .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #990000;
+    background-color: transparent;
+    border: 2px solid #990000;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    margin-left: 150px;
+    transition: .5s ease;
+    transition-property: background-color, color;
+}
+
+#presentation .cta:hover{
+    color: white;
+    font-weight: 700;
+    background-color: #990000;
+}
+
+.animation{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    border-right: 2px solid transparent;
+    animation: blinkCursor 500ms 3 ease,
+    textMachine 4s steps(40) forwards;
+    animation-delay: .5s;
+}
+
+#presentation::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    height:100%;
+    width: 100%;
+    background-color:white;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Keyframes */
+
+@keyframes blinkCursor{
+    0%{
+        border-right-color: transparent;
+    }
+    50%{
+        border-right-color: rgba(25,25,25);
+    }
+    100%{
+        border-right-color: transparent;
+    }
+}
+@keyframes textMachine{
+    0%{
+        width: 0;
+        color: rgba(25,25,25);
+    }
+    100%{
+        width:100%;
+        color: rgba(25,25,25);
+    }
+}
